@@ -1,0 +1,15 @@
+{
+    "data": {
+        "list": [
+            {
+                "firstName": "Clint",
+                "nickname": "CB",
+                "favoriteAnimal": "bear"
+            },
+            {
+                "lastName": "Bush",
+                "favoriteFood": "rice"
+            }
+        ]
+    }
+}

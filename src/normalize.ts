@@ -1,11 +1,18 @@
 const logger = require('node-color-log');
-logger.setLevel('success');
+const data = require('../data/samples/sample.json');
 
-// shows everytime
-logger.log('hello world [LOG]');
-// respects log level
-logger.success('hello world [SUCCESS]');
-logger.debug('hello world [DEBUG]');
-logger.info('hello world [INFO]');
-logger.warn('hello world [WARN]');
-logger.error('hello world [ERROR]');
+logger.debug(data);
+
+interface ListObject {
+    [key:string]: string;
+}
+
+function mergeObject(obj1: ListObject, obj2: ListObject) {
+    logger.debug('obj1', obj1);
+    logger.debug('obj2', obj2);
+    return Object.assign({}, obj1, obj2);
+}
+
+logger.debug('new object', mergeObject(data.data.list[0], data.data.list[1]));
+
+export {};
