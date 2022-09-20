@@ -1,0 +1,28 @@
+{
+  "name": "json-normalizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "watch": {
+    "dev": {
+      "extensions": "ts",
+      "quiet": false
+    }
+  },
+  "scripts": {
+    "app": "node dist/normalize.js",
+    "dev": "npm run build && npm run app",
+    "start": "npm run watch",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "onchange --initial \"src/*.ts\" -- npm run dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "node-color-log": "^10.0.2",
+    "onchange": "^7.1.0",
+    "typescript": "^4.8.3"
+  }
+}
