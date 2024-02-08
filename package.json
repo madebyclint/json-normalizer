@@ -10,8 +10,9 @@
     }
   },
   "scripts": {
-    "app": "node dist/normalize.js",
-    "dev": "npm run build && npm run app",
+    "normalize": "npm run build && node dist/normalize.js",
+    "structure": "npm run build && node dist/parse-structure.js",
+    "dev": "normalize",
     "start": "npm run watch",
     "lint": "eslint . --ext .ts",
     "build": "tsc",

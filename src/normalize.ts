@@ -1,5 +1,5 @@
 const logger = require('node-color-log');
-const data = require('../data/private/sample.json');
+const data = require('../data/private/normalize-sample.json');
 
 logger.debug(data);
 
